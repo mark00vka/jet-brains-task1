@@ -66,7 +66,7 @@ public class Highlighter {
         Pattern pattern = Pattern.compile(keywordPattern);
         Matcher matcher = pattern.matcher(text);
 
-        if (matcher.find()) {
+        while (matcher.find()) {
             int start = matcher.start();
             int end = matcher.end();
             doc.setCharacterAttributes(start, end - start, keywordStyle, false);
